@@ -7,15 +7,15 @@ import re
 #======================================================================================================================
 
 vsa_leta = ['2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016']
-vse_kategorije = ['ChopperAndCruiser', 'EnduroAndTouringEnduro', 'Motorcycle', 'NakedBike',
-              'SportsAndSuperSportsBike', 'SportTouringMotorcycle', 'Streetfighter',
+vse_kategorije = ['ChopperAndCruiser', 'EnduroAndTouringEnduro', 'NakedBike',
+              'SportsAndSuperSportsBike', 'SportTouringMotorcycle',
               'SuperMoto', 'Tourer']
 
 #======================================================================================================================
 #   Najprej za vsako kategorijo in leto prve registracije shranimo prvo stran oglasov. Tako bomo izvedeli na koliko
 #   straneh so iskani oglasi.
 #======================================================================================================================
-
+vsi_oglasi = {}
 for kategorija in vse_kategorije:
     for leto in vsa_leta:
         osnovni_naslov = 'http://suchen.mobile.de/fahrzeuge/search.html'
@@ -31,8 +31,8 @@ for kategorija in vse_kategorije:
         orodja1.shrani(naslov, datoteka)
 
         with open(datoteka, encoding="utf8") as f:
-            # V izvorni kodi vsake prve strani poiščemo vsa ujemanja s pageNumber in največje število, ki pove število
-            # vseh strani z oglasi dodamo v slovar slovarjev st_strani.
+            # V izvorni kodi vsake prve strani poiščemo vsa ujemanja s pageNumber in tako dobimo največje število,
+            # ki nam pove število vseh strani.
             vsebina = f.read()
             stevila = []
             for prva_stran_oglasov in re.finditer(
@@ -52,18 +52,26 @@ for kategorija in vse_kategorije:
             datoteka_1 = 'motocikli/{}_{}_{:02}.html'.format(leto, kategorija, stran)
             orodja1.shrani(nov_naslov, datoteka_1)
 
+#======================================================================================================================
+#   V html datotekah bomo za vsak oglas poiskali id, opis in ceno motocikla,
+
             # with open(datoteka_1, encoding="utf8") as h:
             #     vsebina = h.read()
             #     for oglas in re.finditer(
-            #      r'id=(?P<id>\d{9})'
-            #      r'.+?<span class="h3 u-text-break-word">(?P<motor>.+?)</span>'
-            #      r'.+?<span class="h3 u-block">(?P<cena>.+?)</span>'
-            #      r'.+?class="rbt-regMilPow">(?P<opis>.+?)</div>'
-            #      , vsebina):
+            #             r'id=(?P<id>\d{9})'
+            #             r'.+?<span class="h3 u-text-break-word">(?P<motor>.+?)</span>'
+            #             r'.+?<span class="h3 u-block">(?P<cena>.+?)</span>'
+            #             r'.+?class="rbt-regMilPow">(?P<opis>.+?)</div>'
+            #              , vsebina):
+            #
+            #         podatki_oglasa = {}
+            #         id = int(oglas.group('id'))
+            #         podatki_oglasa['motor'] = oglas.group('motor')
+            #         podatki_oglasa['cena'] = oglas.group('cena')
+            #         podatki_oglasa['opis'] = oglas.group('opis')
+            #         vsi_oglasi[id] = podatki_oglasa
 
- #             podatki_oglasa = {}
- #             podatki_oglasa['motor'] = oglas.group('motor')
- #             podatki_oglasa['cena'] = oglas.group('cena')
- #             podatki_oglasa['opis'] = oglas.group('opis')
- #             vsi_oglasi[oglas.group('id')] = podatki_oglasa
- # print (vsi_oglasi)
+#======================================================================================================================
+#   Preden podatke shranimo v csv datoteko, jih moramo še urediti.
+#======================================================================================================================
+
