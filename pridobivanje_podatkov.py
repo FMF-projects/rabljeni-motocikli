@@ -111,13 +111,13 @@ for kategorija in vse_kategorije:
                     podatki_oglasa = {}
                     podatki_oglasa['id'] = id
                     podatki_oglasa['znamka'] = znamka
-                    podatki_oglasa['cena_(€)'] = cena
+                    podatki_oglasa['cena'] = cena
                     podatki_oglasa['km'] = km
-                    podatki_oglasa['moc_(kW)'] = moc
+                    podatki_oglasa['moc'] = moc
                     podatki_oglasa['letnik'] = letnik
-                    podatki_oglasa['prostornina_(ccm)'] = prostornina
+                    podatki_oglasa['prostornina'] = prostornina
                     podatki_oglasa['tip'] = tip
                     vsi_oglasi.append(podatki_oglasa)
 
-orodja1.zapisi_tabelo(vsi_oglasi,['id', 'letnik', 'znamka', 'tip', 'prostornina_(ccm)',
-                                  'moc_(kW)', 'km', 'cena_(€)'], 'motocikli.csv')
+orodja1.zapisi_tabelo(vsi_oglasi,['id', 'letnik', 'znamka', 'tip', 'prostornina',
+                                  'moc', 'km', 'cena'], 'motocikli.csv')

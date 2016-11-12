@@ -1,4 +1,4 @@
-id,letnik,znamka,tip,prostornina_(ccm),moc_(kW),km,cena_(€)
+id,letnik,znamka,tip,prostornina,moc,km,cena
 234776213,2006,Hyosung,Chopper And Cruiser,650,55,17000,2800
 234776213,2006,Hyosung,Chopper And Cruiser,647,59,3945,2999
 234927975,2006,Harley-Davidson,Chopper And Cruiser,1449,47,28700,13500
