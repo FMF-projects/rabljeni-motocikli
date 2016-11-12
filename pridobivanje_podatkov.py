@@ -67,7 +67,7 @@ for kategorija in vse_kategorije:
                         r'.+?class="rbt-regMilPow">(?P<opis>.+?)</div>'
                          , vsebina):
 
-                    id = int(oglas.group('id'))
+                    id = oglas.group('id')
 
                     motor = oglas.group('motor')
                     motor = motor.split(" ")
