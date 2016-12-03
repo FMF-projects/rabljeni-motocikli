@@ -2435,7 +2435,6 @@ id,letnik,znamka,tip,prostornina,moc,km,cena
 233025190,2013,Harley-Davidson,Chopper And Cruiser,1690,58,6016,19900
 229373642,2013,Harley-Davidson,Chopper And Cruiser,1690,58,5337,19990
 218008074,2013,VICTORY,Chopper And Cruiser,1731,65,4650,19999
-235279462,2013,Harley-Davidson,Chopper And Cruiser,1345,989,1000,20000
 235279462,2013,Harley-Davidson,Chopper And Cruiser,1690,62,7500,20400
 228611163,2013,Harley-Davidson,Chopper And Cruiser,1690,64,27645,20490
 231629161,2013,Harley-Davidson,Chopper And Cruiser,1247,90,13800,20800
@@ -12024,7 +12023,6 @@ id,letnik,znamka,tip,prostornina,moc,km,cena
 235365861,2006,Honda,Sports And Super Sports Bike,1000,127,28000,5300
 234176612,2006,Suzuki,Sports And Super Sports Bike,600,92,27700,5300
 234175623,2006,Suzuki,Sports And Super Sports Bike,599,92,25000,5300
-234031837,2006,Suzuki,Sports And Super Sports Bike,600,600,16475,5300
 233953720,2006,Suzuki,Sports And Super Sports Bike,600,92,17732,5300
 233544991,2006,Suzuki,Sports And Super Sports Bike,999,131,39600,5300
 232370106,2006,Suzuki,Sports And Super Sports Bike,999,131,27000,5300
@@ -13717,7 +13715,6 @@ id,letnik,znamka,tip,prostornina,moc,km,cena
 232373794,2010,Aprilia,Sports And Super Sports Bike,998,102,22424,6980
 232373794,2010,Suzuki,Sports And Super Sports Bike,999,136,18800,7250
 232987079,2010,Honda,Sports And Super Sports Bike,999,131,34700,7285
-231823008,2010,Yamaha,Sports And Super Sports Bike,1000,998,19318,7290
 235077810,2010,BMW,Sports And Super Sports Bike,999,142,16900,7290
 226950529,2010,Honda,Sports And Super Sports Bike,600,88,24500,7299
 231152597,2010,Suzuki,Sports And Super Sports Bike,1000,136,12600,7300

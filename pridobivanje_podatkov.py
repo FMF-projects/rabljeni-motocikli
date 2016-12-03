@@ -103,6 +103,8 @@ for kategorija in vse_kategorije:
 
                     moc = moc.split(" ")
                     moc = int(moc[1])
+                    if moc > 200:
+                        continue
 
                     tip = kategorija
                     tip = re.findall('[A-Z][a-z]*', tip)
