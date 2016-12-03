@@ -24,7 +24,7 @@ for kategorija in vse_kategorije:
         vrsta_motorja = '&categories={}'.format(kategorija)
         letnik_motorja = '&minFirstRegistrationDate={}-01-01&maxFirstRegistrationDate={}-12-31'.format(leto, leto)
         parametri2 = '&maxPowerAsArray=PS&minPowerAsArray=PS&fuels=PETROL&transmissions=MANUAL_GEAR'
-        parametri3 = '&minCubicCapacity=500&damageUnrepaired=NO_DAMAGE_UNREPAIRED'
+        parametri3 = '&minCubicCapacity=500&damageUnrepaired=NO_DAMAGE_UNREPAIRED&maxPrice=30000&minMileage=1000'
 
         naslov = '{}?{}{}{}{}{}'.format(osnovni_naslov, parametri1, vrsta_motorja,
                                         letnik_motorja, parametri2, parametri3)
@@ -93,12 +93,14 @@ for kategorija in vse_kategorije:
                     km = km.strip('km')
                     km = km.strip(" ")
                     km = int(km.replace(".", ""))
-                    if km > 200000:
+                    if km > 150000:
                         continue
 
                     prostornina = prostornina.split()
                     prostornina = prostornina[0]
                     prostornina = int(prostornina.replace(".", ""))
+                    if prostornina > 2000:
+                        continue
 
                     letnik = letnik.split("/")
                     letnik = int(letnik[1])
