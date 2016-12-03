@@ -93,6 +93,8 @@ for kategorija in vse_kategorije:
                     km = km.strip('km')
                     km = km.strip(" ")
                     km = int(km.replace(".", ""))
+                    if km > 200000:
+                        continue
 
                     prostornina = prostornina.split()
                     prostornina = prostornina[0]

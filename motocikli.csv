@@ -297,7 +297,6 @@ id,letnik,znamka,tip,prostornina,moc,km,cena
 220938301,2006,Harley-Davidson,Chopper And Cruiser,1801,60,7000,24999
 220938301,2006,Harley-Davidson,Chopper And Cruiser,1801,60,3700,25000
 211112705,2006,Harley-Davidson,Chopper And Cruiser,1584,59,22000,25999
-233068212,2006,Harley-Davidson,Chopper And Cruiser,1340,42,999999,29500
 232555512,2006,Harley-Davidson,Chopper And Cruiser,1449,47,15000,29900
 230857130,2006,Harley-Davidson,Chopper And Cruiser,1449,52,9500,29900
 234983361,2006,Harley-Davidson,Chopper And Cruiser,1200,89,3000,29990
@@ -11264,7 +11263,6 @@ id,letnik,znamka,tip,prostornina,moc,km,cena
 221323343,2016,Yamaha,Naked Bike,847,85,1500,8990
 233601232,2016,Triumph,Naked Bike,675,78,5999,8999
 234017301,2016,Triumph,Naked Bike,675,78,5999,8999
-234017301,2016,Honda,Naked Bike,998,92,1218689,8999
 232555056,2016,Ducati,Naked Bike,803,55,2478,8999
 234876088,2016,Yamaha,Naked Bike,850,85,771,9000
 234876088,2016,Honda,Naked Bike,1000,79,11626,9000
