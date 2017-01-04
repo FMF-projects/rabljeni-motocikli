@@ -80,6 +80,8 @@ for kategorija in vse_kategorije:
                     cena = cena.strip('€')
                     cena = cena.strip(' ')
                     cena = int(cena.replace(".",""))
+                    if cena > 30000 or cena < 500:
+                        continue
 
                     opis = oglas.group('opis')
                     opis = opis.encode('ascii', 'replace')
@@ -93,13 +95,13 @@ for kategorija in vse_kategorije:
                     km = km.strip('km')
                     km = km.strip(" ")
                     km = int(km.replace(".", ""))
-                    if km > 150000:
+                    if km > 100000 or km < 1000:
                         continue
 
                     prostornina = prostornina.split()
                     prostornina = prostornina[0]
                     prostornina = int(prostornina.replace(".", ""))
-                    if prostornina > 2000:
+                    if prostornina > 2000 or prostornina < 500:
                         continue
 
                     letnik = letnik.split("/")
@@ -107,7 +109,7 @@ for kategorija in vse_kategorije:
 
                     moc = moc.split(" ")
                     moc = int(moc[1])
-                    if moc > 200:
+                    if moc > 200 or moc < 10:
                         continue
 
                     tip = kategorija
